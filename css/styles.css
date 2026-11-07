@@ -1,0 +1,65 @@
+/* =========================
+   VARIABLES GENERALES
+   ========================= */
+
+:root {
+    --bg: #F8FAFC;
+    --surface: #FFFFFF;
+
+    --sidebar: #111827;
+    --sidebar-hover: #1F2937;
+
+    --primary: #2563EB;
+    --primary-hover: #1D4ED8;
+
+    --accent: #F97316;
+
+    --text: #0F172A;
+    --text-soft: #64748B;
+
+    --border: #E2E8F0;
+
+    --success: #22C55E;
+    --danger: #EF4444;
+
+    --radius: 18px;
+    --radius-card: 24px;
+
+    --shadow:
+            0 10px 25px rgba(15, 23, 42, 0.05),
+            0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+/* =========================
+   CONTENEDOR DE CONTRASEÑA
+   ========================= */
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    margin-bottom: 0; /* Evita que empuje el botón hacia abajo */
+    padding-right: 70px; /* Espacio para que el texto no quede debajo del botón */
+}
+
+.password-toggle {
+    position: absolute;
+    right: 12px;
+    background: #E2E8F0;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text);
+    transition: 0.2s ease;
+}
+
+.password-toggle:hover {
+    background: #CBD5E1;
+}
+

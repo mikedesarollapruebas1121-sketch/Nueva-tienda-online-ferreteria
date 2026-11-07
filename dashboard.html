@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferresasweb | Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="topbar">
+    <h1>Ferresasweb</h1>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="list.html">Clientes</a>
+        <a href="dashboard.html">Productos</a>
+        <a href="">Facturas</a>
+        <a href="login.html">Salir</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="card" style="margin-bottom: 24px;">
+        <h2>Panel Principal</h2>
+        <p class="description">Aquí tienes el resumen y las acciones rápidas de tu ferretería.</p>
+    </section>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 24px;">
+        <article class="card">
+            <h3>Clientes registrados</h3>
+            <p style="font-size: 32px; font-weight: 800; color: var(--primary); margin: 10px 0;">0</p>
+            <p class="description">Aún no hay registros en el sistema.</p>
+        </article>
+
+        <article class="card">
+            <h3>Productos</h3>
+            <p style="font-size: 32px; font-weight: 800; color: var(--accent); margin: 10px 0;">0</p>
+            <p class="description">Gestiona tu inventario actual.</p>
+        </article>
+
+        <article class="card">
+            <h3>Facturas del mes</h3>
+            <p style="font-size: 32px; font-weight: 800; color: var(--success); margin: 10px 0;">0</p>
+            <p class="description">Sin movimientos recientes.</p>
+        </article>
+    </div>
+
+    <section class="card">
+        <h2>Acciones rápidas</h2>
+        <p class="description" style="margin-bottom: 20px;">Comienza a gestionar tu información de forma ágil.</p>
+        <div class="toolbar" style="margin-bottom: 0;">
+            <a th:href="@{/view/usuarios}" class="btn btn-primary">+ Registrar cliente</a>
+            <a href="#" class="btn btn-secondary">+ Agregar producto</a>
+            <a href="#" class="btn btn-terciary" style="color: white;">+ Crear factura</a>
+        </div>
+    </section>
+</main>
+</body>
+</html>
