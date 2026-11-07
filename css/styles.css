@@ -31,35 +31,54 @@
 }
 
 /* =========================
-   CONTENEDOR DE CONTRASEÑA
+   CONTENEDORES Y LAYOUT
    ========================= */
 
-.password-container {
-    position: relative;
+.container {
+    max-width: 1280px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+.auth-container {
+    min-height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding: 24px;
 }
 
-.password-container input {
-    margin-bottom: 0; /* Evita que empuje el botón hacia abajo */
-    padding-right: 70px; /* Espacio para que el texto no quede debajo del botón */
+
+/* =========================
+   TARJETAS (CARDS)
+   ========================= */
+
+.card {
+    background: var(--surface);
+    border-radius: var(--radius-card);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-.password-toggle {
-    position: absolute;
-    right: 12px;
-    background: #E2E8F0;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 10px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
+.login-card {
+    width: 100%;
+    max-width: 440px;
+}
+
+.login-card h1 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 6px;
     color: var(--text);
-    transition: 0.2s ease;
 }
 
-.password-toggle:hover {
-    background: #CBD5E1;
+h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 28px;
+    letter-spacing: -1px;
+    color: var(--text);
 }
+
 
