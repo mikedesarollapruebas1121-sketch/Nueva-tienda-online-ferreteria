@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferresasweb | Usuarios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css"
+</head>
+
+<body>
+
+<!-- Menú de navegación global -->
+<header class="topbar">
+    <h1>Ferresasweb</h1>
+    <nav>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/list.html">Clientes</a>
+        <a href="#">Productos</a>
+        <a href="#">Facturas</a>
+        <a href="/login.html">Salir</a>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="card">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <div>
+                <h2>Usuarios</h2>
+                <p>Consulta, registra, modifica o elimina usuarios del sistema.</up>
+            </div>
+            <a href="form.html" class="btn btn-primary">+ Registrar usuario</a>
+        </div>
+
+        <div style="overflow-x: auto;">
+            <table class="table">
+                <thead>
+                    <tr style="border-bottom: 1px solid #e2e8f0;">
+                        <th style="padding: 12px;">ACCIONES</th>
+                        <th style="padding: 12px;">ID</th>
+                        <th style="padding: 12px;">DOCUMENTO</th>
+                        <th style="padding: 12px;">NOMBRE</th>
+                        <th style="padding: 12px;">APELLIDO</th>
+                        <th style="padding: 12px;">CORREO</th>
+                        <th style="padding: 12px;">TELÉFONO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border-bottom: 1px solid #e2e8f0; color: #334155;">
+                        <td style="padding: 12px;">
+                            <a href="form.html" style="background: #e2e8f0; padding: 4px 10px; border-radius: 4px; font-size: 12px; text-decoration: none; color: #334155;">Editar</a>
+                            <a href="#" style="padding: 4px 10px; font-size: 12px; text-decoration: none; color: #ef4444;">Eliminar</a>
+                        </td>
+                        <td style="padding: 12px;">1</td>
+                        <td style="padding: 12px;">999999991</td>
+                        <td style="padding: 12px;">DAVID</td>
+                        <td style="padding: 12px;">PEREZ</td>
+                        <td style="padding: 12px;">asd@gmail.com</td>
+                        <td style="padding: 12px;">1234562342</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p style="margin-top: 15px; font-size: 14px; color: #64748b;">Total de usuarios: 1</p>
+    </section>
+</main>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

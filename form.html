@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferresasweb | Formulario Usuario</title>
+    <!-- Ruta corregida para salir de la carpeta usuarios y encontrar el CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<!-- Menú de navegación alineado correctamente -->
+<header class="topbar">
+    <h1>Ferresasweb</h1>
+    <nav>
+        <a href="/dashboard.html">Dashboard</a>
+        <a href="/list.html">Clientes</a>
+        <a href="#">Productos</a>
+        <a href="#">Facturas</a>
+        <a href="/login.html">Salir</a>
+    </nav>
+</header>
+
+<main class="container" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+    <section class="card" style="background: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+        
+        <div style="margin-bottom: 25px;">
+            <h2 style="font-size: 24px; margin-bottom: 5px;">Registrar / Editar Usuario</h2>
+            <p style="color: #64748b; font-size: 14px;">Complete la información para gestionar el usuario en el sistema.</p>
+        </div>
+
+        <!-- Formulario conectado a main.js con id="formCliente" -->
+        <form id="formCliente" action="#" method="POST">
+
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+
+                <!-- Documento -->
+                <div class="form-group">
+                    <label for="documento" style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px;">Documento *</label>
+                    <input type="number" id="documento" placeholder="Ejemplo: 1112345678" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px;">
+                </div>
+
+                <!-- Rol -->
+                <div class="form-group">
+                    <label for="rol" style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px;">Rol *</label>
+                    <select id="rol" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; background: white;">
+                        <option value="">Seleccione un rol</option>
+                        <option value="1">Administrador</option>
+                        <option value="2">Empleado</option>
+                        <option value="3">Cliente</option>
+                    </select>
+                </div>
+
+                <!-- Nombre -->
+                <div class="form-group">
+                    <label for="nombre" style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px;">Nombre *</label>
+                    <input type="text" id="nombre" placeholder="Ingrese el nombre" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px;">
+                </div>
+
+                <!-- Apellido -->
+                <div class="form-group">
+                    <label for="apellido" style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px;">Apellido *</label>
+                    <input type="text" id="apellido" placeholder="Ingrese el apellido" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px;">
+                </div>
+
+                <!-- Correo -->
+                <div class="form-group">
+                    <label for="correo" style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px;">Correo electrónico *</label>
+                    <input type="email" id="correo" placeholder="usuario@correo.com" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px;">
+                </div>
+
+                <!-- Teléfono -->
+                <div class="form-group">
+                    <label for="telefono" style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px;">Teléfono *</label>
+                    <input type="tel" id="telefono" placeholder="Ejemplo: 3101234567" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px;">
+                </div>
+
+                <!-- Contraseña -->
+                <div class="form-group">
+                    <label for="contrasena" style="display: block; margin-bottom: 5px; font-weight: 600; font-size: 14px;">Contraseña *</label>
+                    <div style="position: relative;">
+                        <input type="password" id="contrasena" placeholder="Ingrese la contraseña" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px;">
+                        <button type="button" onclick="alternarContrasena()" style="position: absolute; right: 10px; top: 10px; background: none; border: none; cursor: pointer; color: #64748b;">Ver</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Botones de acción -->
+            <div style="margin-top: 25px; display: flex; justify-content: flex-end; gap: 10px;">
+                <a href="list.html" class="btn btn-secondary" style="padding: 10px 20px; border: 1px solid #cbd5e1; border-radius: 8px; text-decoration: none; color: #334155;">Volver</a>
+                <button type="submit" class="btn btn-primary" style="padding: 10px 20px; background: #2563eb; color: white; border: none; border-radius: 8px; cursor: pointer;">Guardar</button>
+            </div>
+
+        </form>
+
+    </section>
+</main>
+
+<!-- JS personalizado -->
+<script src="../js/main.js"></script>
+
+</body>
+</html>
