@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Ferresasweb</title>
+    <!-- Enlace directo a tu CSS global del sistema -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Encabezado / Barra Superior Global -->
+    <header class="topbar">
+    <h1>Ferresasweb</h1>
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="list.html">Clientes</a>
+        <a href="/productos.html">Productos</a>
+        <a href="">Facturas</a>
+        <a href="login.html">Salir</a>
+    </nav>
+</header>
+
+    <!-- Contenedor Principal Global -->
+    <main class="container">
+
+        <!-- Tarjeta de Categorías Visuales -->
+        <div class="card" style="margin-bottom: 24px;">
+            <h2 style="font-size: 20px; margin-bottom: 16px;">Categorías de Ferretería</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 12px;">
+                <button onclick="filtrarPorCategoria('Eléctricas')" class="btn btn-secondary" style="flex-direction: column; height: auto; padding: 12px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=150&q=80" alt="Eléctricas" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 700; color: var(--text);">Eléctricas e Inalámbricas</span>
+                </button>
+                <button onclick="filtrarPorCategoria('Accesorios')" class="btn btn-secondary" style="flex-direction: column; height: auto; padding: 12px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=150&q=80" alt="Accesorios" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 700; color: var(--text);">Accesorios</span>
+                </button>
+                <button onclick="filtrarPorCategoria('Herramientas')" class="btn btn-secondary" style="flex-direction: column; height: auto; padding: 12px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=150&q=80" alt="Manuales" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 700; color: var(--text);">Herramientas Manuales</span>
+                </button>
+                <button onclick="filtrarPorCategoria('Medición')" class="btn btn-secondary" style="flex-direction: column; height: auto; padding: 12px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=150&q=80" alt="Medición" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 700; color: var(--text);">Medición</span>
+                </button>
+                <button onclick="filtrarPorCategoria('Maquinaria')" class="btn btn-secondary" style="flex-direction: column; height: auto; padding: 12px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=150&q=80" alt="Maquinaria" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 700; color: var(--text);">Maquinaria</span>
+                </button>
+                <button onclick="filtrarPorCategoria('Organizadores')" class="btn btn-secondary" style="flex-direction: column; height: auto; padding: 12px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=150&q=80" alt="Organizadores" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 700; color: var(--text);">Organizadores</span>
+                </button>
+                <button onclick="filtrarPorCategoria('Construcción')" class="btn btn-secondary" style="flex-direction: column; height: auto; padding: 12px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=150&q=80" alt="Construcción" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 700; color: var(--text);">Construcción</span>
+                </button>
+                <button onclick="filtrarPorCategoria('Especialidad')" class="btn btn-secondary" style="flex-direction: column; height: auto; padding: 12px; text-align: center;">
+                    <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&w=150&q=80" alt="Especialidad" style="width: 48px; height: 48px; object-fit: cover; border-radius: 12px; margin-bottom: 8px;">
+                    <span style="font-size: 11px; font-weight: 700; color: var(--text);">Especialidad</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Tarjeta de Filtros Técnicos utilizando el grid global (.form-grid) -->
+        <div class="card" style="margin-bottom: 24px;">
+            <h2 style="font-size: 20px; margin-bottom: 16px;">Filtros técnicos</h2>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="filtro-medida">Medida / Dimensión</label>
+                    <select id="filtro-medida">
+                        <option value="">Todas las Medidas / Dimensiones</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="filtro-color">Acabado / Color</label>
+                    <select id="filtro-color">
+                        <option value="">Todos los Acabados / Colores</option>
+                    </select>
+                </div>
+            </div>
+            <div style="margin-top: 16px; display: flex; justify-content: flex-end;">
+                <button onclick="resetearFiltros()" class="btn btn-secondary">Limpiar filtros</button>
+            </div>
+        </div>
+
+        <!-- Layout de Contenido Principal (Catálogo y Carrito) -->
+        <div style="display: grid; grid-template-columns: 3fr 1fr; gap: 24px; align-items: start;">
+            <!-- Catálogo de Productos -->
+            <div id="catalogo-productos" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px;">
+                <!-- Rellenado dinámicamente por JS -->
+            </div>
+
+            <!-- Tarjeta del Carrito -->
+            <div class="card" style="position: sticky; top: 100px;">
+                <h2 style="font-size: 20px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Carrito</span>
+                    <span id="contador-items" style="font-size: 12px; font-weight: 700; color: var(--primary); background: #EFF6FF; padding: 4px 8px; border-radius: 8px;">0 items</span>
+                </h2>
+                <ul id="lista-carrito" style="list-style: none; margin-bottom: 16px; max-height: 250px; overflow-y: auto;">
+                    <li style="color: var(--text-soft); text-align: center; font-size: 14px; padding: 16px 0;">El carrito está vacío</li>
+                </ul>
+                <div style="border-top: 1px solid var(--border); padding-top: 16px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; font-weight: 700;">
+                    <span>Total:</span>
+                    <span id="total-carrito" style="color: var(--success); font-size: 18px;">$ 0</span>
+                </div>
+                <button onclick="procesarCompra()" class="btn btn-primary" style="width: 100%;">Realizar Pedido</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script conectado a main.js -->
+    <script src="Js/main.js"></script>
+</body>
+</html>
